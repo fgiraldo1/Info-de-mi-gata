@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Info y rastreo de mi gata</title>
+  <link rel="stylesheet" href="imagen.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+      font-family: 'Segoe UI', sans-serif;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      text-align: center;
+    }
+
+    .contenido {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 50px auto;
+      max-width: 600px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .botones {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #565a5c;
+    }
+
+    #info {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .galeria img {
+      width: 100px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenido">
+    <h1>¿Has visto a Liah?</h1>
+    <p>Liah es una gata gris con manchas blancas. Es muy tranquila y cariñosa.  
+       Si la encontraste, por favor contáctame.  
+       Mi número de contacto es <strong>3145932530</strong> o <strong>3115064021</strong>. ¡La extrañamos mucho!</p>
+
+    <div class="botones">
+      <button onclick="mostrarFamilia()">Información de mi familia</button>
+      <button onclick="mostrarMia()">Información mía</button>
+      <button onclick="mostrarFotos()">Mis fotos</button>
+    </div>
+
+    <div id="info"></div>
+  </div>
+
+  <script>
+    function mostrarFamilia() {
+      document.getElementById("info").innerHTML = `
+        <h2>Mi familia</h2>
+        <p>Vivimos en Pereira, vía Condina, vereda Guayabal, finca Angelópolis.  
+        Mi mamá se llama Sofía, mi papá Diego.</p>
+      `;
+    }
+
+    function mostrarMia() {
+      document.getElementById("info").innerHTML = `
+        <h2>Sobre mí</h2>
+        <p>Me llamo Liah, tengo poco más de 3 meses.  
+        Si me encontraste, llama a mis padres al <strong>3145932530</strong> o <strong>3115064021</strong>,  
+        o escríbeles por WhatsApp.</p>
+      `;
+    }
+
+    function mostrarFotos() {
+      document.getElementById("info").innerHTML = `
+        <h2>Mis fotos</h2>
+        <div class="galeria">
+          <img src="liah.jpeg" alt="Liah 1">
+          <img src="liah2.jpeg" alt="Liah 2">
+          <img src="liah3.jpeg" alt="Liah3">
+        </div>
+      `;
+    }
+  </script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/+573145932530?text=Hola,%20tengo%20información%20sobre%20Liah" 
+   class="whatsapp-button" target="_blank">
+   📱 Contáctame por WhatsApp
+</a>
+
+<!-- Estilos en tu CSS externo -->
+<style>
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+</style>
+
+</html>
